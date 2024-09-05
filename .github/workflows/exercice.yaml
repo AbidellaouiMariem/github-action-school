@@ -2,7 +2,11 @@ name: CI/CD
 
 on:
   workflow_dispatch:
-
+    inputs:
+        dry-run:
+          type: boolean
+          description: Skip building and only print output
+          default: false
 jobs:
   lint-and-test:
     name: Linting and testing

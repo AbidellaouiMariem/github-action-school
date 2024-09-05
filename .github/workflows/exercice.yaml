@@ -37,7 +37,7 @@ jobs:
     name: Build and push docker image
     runs-on: ubuntu-latest
     needs: lint-and-test
-    if: ${{ !inputs.dry-run }}
+    if: ${{ inputs.dry-run }}
     steps:
       - name: Checkout
         id: checkout
